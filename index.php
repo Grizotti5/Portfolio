@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Carolina Grizotti</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="imagens/fav.ico" rel="icon">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">GRIZOTTI</a>
+                <ul class="nav-links">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#skills">Habilidades</a></li>
+                    <li><a href="#projects">Projetos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="row" id="hero">
+                <div class="hero-content col-lg-8  align-content-center">
+                    <h1>Desenvolvedora Full Stack</h1>
+                    <p>Interfaces modernas e responsivas que unem design e funcionalidade para proporcionar experiências envolventes.</p>
+                    <a href="#projects" class="btn">Ver Projetos</a>
+                </div>
+                <div class="col-lg-4 align-content-center">
+                    <img src="imagens/perfil.jpeg" alt="Imagem de perfil" class="imagem-circulo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: #6A0DAD">Sobre Mim</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Transformo ideias em interfaces que unem design, funcionalidade e emoção.
+Meu propósito é criar experiências digitais que se destaquem pela fluidez, estética moderna e atenção aos detalhes — sempre buscando equilibrar tecnologia e sensibilidade em cada projeto.</p>
+                    
+                    <div class="skills">
+                        <span class="skill-tag">Laravel</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">APIs REST</span>
+                    </div>
+                    
+                    <a href="#contact" class="btn" style="margin-top: 30px;">Entrar em Contato</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="skills" style="background: #c0c0c0;">
+        <div class="container">
+            <div class="section-title">
+                <h2  style="color: #9B5DE5">Habilidades Técnicas</h2>
+                <p style="color: #333">Tecnologias e ferramentas que domino e utilizo no meu dia a dia</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 30px;">
+                <div style="background: white; padding: 25px; border-radius: 10px; text-align: center;">
+                    <div style="font-size: 3rem; color: #f56565; margin-bottom: 15px;">
+                        <i class="fab fa-laravel"></i>
+                    </div>
+                    <h3>Laravel</h3>
+                    <p>Desenvolvimento de aplicações robustas com Laravel, utilizando Eloquent, Blade e Artisan.</p>
+                </div>
+                
+                <div style="background: white; padding: 25px; border-radius: 10px; text-align: center;">
+                    <div style="font-size: 3rem; color: #41b883; margin-bottom: 15px;">
+                        <i class="fab fa-vuejs"></i>
+                    </div>
+                    <h3>Vue.js</h3>
+                    <p>Criação de interfaces modernas e reativas com Vue.js, Vuex e Vue Router.</p>
+                </div>
+                
+                <div style="background: white; padding: 25px; border-radius: 10px; text-align: center;">
+                    <div style="font-size: 3rem; color: #FFDD00 ; margin-bottom: 15px;">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>Desenvolvimento de funcionalidades front-end e back-end com JavaScript e Node.js.</p>
+                </div>
+                
+                <div style="background: white; padding: 25px; border-radius: 10px; text-align: center;">
+                    <div style="font-size: 3rem; color: #38b2ac; margin-bottom: 15px;">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Banco de Dados</h3>
+                    <p>Modelagem e consulta em bancos relacionais e não-relacionais como MySQL e MongoDB.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meus Projetos</h2>
+                <p>Alguns dos trabalhos que desenvolvi recentemente</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" style="width: 100%;">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="mt-3">VivaFit</h3>
+                        <p>Projeto de site institucional para a academia fictícia VivaFit, destacando planos, benefícios e formulário de matrícula com interface responsiva e dinâmica.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">Vue.js</span>
+                        </div>
+                        <a href="#" class="btn" style="padding: 8px 20px; font-size: 0.9rem;">Ver Detalhes</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1153&q=80" style="width: 100%;">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="mt-3">Dra. Ana Silva</h3>
+                        <p>Projeto de página única para a nutricionista fictícia Ana Silva, com layout limpo e moderno, voltado à divulgação de serviços e contato com pacientes.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Vue.js</span>
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">Bootstrap</span>
+                        </div>
+                        <a href="#" class="btn" style="padding: 8px 20px; font-size: 0.9rem;">Ver Detalhes</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="mt-3">PetJoy - Em construção</h3>
+                        <p>Website desenvolvido em Laravel para o petshop fictício PetJoy, com páginas dedicadas a produtos, serviços e contato. O projeto combina praticidade, design responsivo e uma navegação intuitiva voltada à experiência do cliente e seu pet.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Vue.js</span>
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">Laravel</span>
+                        </div>
+                        <a href="#" class="btn" style="padding: 8px 20px; font-size: 0.9rem;">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="background: #c0c0c0;">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: #6A0DAD">Entre em Contato</h2>
+                <p style="color: #333">Quer falar sobre seu projeto? Entre em contato!</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>carolinagrizotti5@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3>Telefone</h3>
+                            <p>(14) 99690-6687</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Localização</h3>
+                            <p>Marília, São Paulo</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome" class="form-control" placeholder="Seu nome completo" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="seu.email@exemplo.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="mensagem" class="form-control" placeholder="Sua mensagem..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo" style="color: #9B5DE5;">GRIZOTTI</div>
+                
+                <div class="social-links">
+                    <a href="https://github.com/Grizotti5" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#https://linkedin.com/in/carolina-grizotti" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <?=date("Y"); ?> Carolina Grizotti. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", async function(e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const formData = new FormData(form);
+
+            const response = await fetch("https://formspree.io/f/mzzkeqzg", {
+                method: "POST",
+                body: formData,
+                headers: {
+                    "Accept": "application/json"
+                }
+            });
+
+            if (response.ok) {
+                Swal.fire({
+                    title: 'Enviado!',
+                    text: 'E-mail enviado com sucesso.',
+                    icon: 'success',
+                    confirmButtonText: 'Ok'
+                }).then(() =>{
+                    form.reset();
+                });
+            } else {
+                Swal.fire({
+                    title: 'Erro!',
+                    text: 'E-mail não enviado.',
+                    icon: 'error',
+                    confirmButtonText: 'Ok'
+                })
+            }
+        });
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
