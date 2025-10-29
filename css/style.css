@@ -114,8 +114,7 @@ nav {
 .hero-content h1 {
     font-size: 3.5rem;
     margin-bottom: 20px;
-    /* background: linear-gradient(to right, var(--primary), var(--secondary)); */
-    background: linear-gradient(to right, #333, #c0c0c0);
+    background: linear-gradient(to right, #222, #d7d7d7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -219,6 +218,7 @@ section {
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%;
 }
 
 .project-card:hover {
@@ -398,7 +398,7 @@ footer {
         left: -100%;
         width: 100%;
         height: calc(100vh - 70px);
-        background: white;
+        background: #333;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -411,11 +411,25 @@ footer {
     
     .nav-links li {
         margin: 15px 0;
+        color: #6A0DAD !important;
     }
     
     .hero-content h1 {
         font-size: 2.5rem;
+        font-size: clamp(1.5rem, 7vw, 3rem);
+        /* line-height: 1.2; */
     }
+    /* .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.2);
+        z-index: 0;
+    }
+    .hero-content {
+        position: relative;
+        z-index: 1;
+    } */
     
     .footer-content {
         flex-direction: column;
