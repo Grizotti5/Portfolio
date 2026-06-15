@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Carolina Grizotti | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+<style>
+
+:root{
+    --mouse-x:50%;
+    --mouse-y:50%;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#050816;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ==========================
+   AURORA INTERATIVA
+========================== */
+
+.aurora{
+    position:fixed;
+    inset:0;
+
+    background:
+
+    radial-gradient(
+        circle at var(--mouse-x) var(--mouse-y),
+        rgba(140,82,255,.45),
+        transparent 25%
+    ),
+
+    radial-gradient(
+        circle at 20% 30%,
+        rgba(0,245,255,.20),
+        transparent 35%
+    ),
+
+    radial-gradient(
+        circle at 80% 20%,
+        rgba(255,0,255,.15),
+        transparent 40%
+    ),
+
+    radial-gradient(
+        circle at 50% 100%,
+        rgba(0,245,255,.15),
+        transparent 40%
+    ),
+
+    #050816;
+
+    z-index:-5;
+}
+
+/* ==========================
+   BLOB NEON
+========================== */
+
+.blob{
+    position:fixed;
+    border-radius:50%;
+    filter:blur(140px);
+    pointer-events:none;
+    z-index:-4;
+}
+
+.blob1{
+    width:600px;
+    height:600px;
+    background:#8c52ff;
+    top:-250px;
+    left:-250px;
+    opacity:.25;
+}
+
+.blob2{
+    width:500px;
+    height:500px;
+    background:#00f5ff;
+    right:-150px;
+    top:150px;
+    opacity:.18;
+}
+
+.blob3{
+    width:600px;
+    height:600px;
+    background:#ff00ff;
+    bottom:-300px;
+    left:30%;
+    opacity:.15;
+}
+
+/* ==========================
+   GLOW DO MOUSE
+========================== */
+
+.mouse-glow{
+    position:fixed;
+
+    width:450px;
+    height:450px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(140,82,255,.35),
+        rgba(0,245,255,.20),
+        transparent 70%
+    );
+
+    filter:blur(90px);
+
+    pointer-events:none;
+
+    z-index:-3;
+
+    transform:translate(-50%,-50%);
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:999;
+
+    padding:30px 8%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    backdrop-filter:blur(25px);
+}
+
+.logo{
+    font-size:.9rem;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+nav ul{
+    display:flex;
+    gap:35px;
+    list-style:none;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00f5ff;
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+
+    padding:0 10%;
+}
+
+.hero-content{
+    width:100%;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:80px;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-photo{
+    width:380px;
+    height:380px;
+
+    border-radius:50%;
+
+    padding:6px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #8c52ff,
+        #00f5ff
+    );
+
+    box-shadow:
+    0 0 40px rgba(140,82,255,.5),
+    0 0 80px rgba(0,245,255,.25);
+
+    animation:float 5s ease-in-out infinite;
+}
+
+.hero-photo img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:4px solid rgba(255,255,255,.1);
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+.hero h1{
+    font-size:7rem;
+    line-height:.9;
+    font-weight:700;
+}
+
+.hero p{
+    margin-top:20px;
+    max-width:550px;
+    color:#bfc9ff;
+}
+
+/* ==========================
+   SECTIONS
+========================== */
+
+.section{
+    padding:120px 10%;
+}
+
+.section-title{
+    font-size:3rem;
+    margin-bottom:40px;
+}
+
+.glass{
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    box-shadow:
+    0 0 25px rgba(140,82,255,.15),
+    0 0 60px rgba(0,245,255,.05);
+}
+
+/* ==========================
+   SKILLS
+========================== */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+.skill{
+    width:130px;
+    height:130px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    transition:.3s;
+
+    box-shadow:
+    0 0 20px rgba(140,82,255,.20);
+}
+
+.skill:hover{
+    transform:translateY(-10px);
+}
+
+.skill i{
+    font-size:2.5rem;
+    margin-bottom:10px;
+}
+
+.social{
+    text-decoration: none;
+    width:65px;
+    height:65px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    transition:.3s;
+
+    box-shadow:
+    0 0 20px rgba(140,82,255,.20);
+}
+
+.social:hover{
+    transform:translateY(-10px);
+}
+.social:hover i{
+    color:white;
+}
+
+.social i{
+    font-size:2rem;
+}
+
+/* ==========================
+   PROJETOS
+========================== */
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.project{
+    overflow:hidden;
+    border-radius:25px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    transition:.3s;
+}
+
+.project:hover{
+    transform:translateY(-10px);
+}
+
+.project img{
+    width:100%;
+    display:block;
+}
+
+.project-content{
+    padding:20px;
+}
+
+.project-content h3{
+    margin-bottom:10px;
+}
+
+/* ==========================
+   CONTATO
+========================== */
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+input,
+textarea{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.1);
+
+    border-radius:15px;
+
+    padding:18px;
+
+    color:white;
+}
+
+button{
+    padding:18px;
+
+    border:none;
+
+    border-radius:15px;
+
+    color:white;
+
+    cursor:pointer;
+
+    background:
+    linear-gradient(
+    135deg,
+    #8c52ff,
+    #00f5ff
+    );
+}
+
+/* ==========================
+   RESPONSIVO
+========================== */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:3.5rem;
+}
+
+nav{
+    flex-direction:column;
+    gap:20px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.section-title{
+    font-size:2rem;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="aurora"></div>
+
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+<div class="blob blob3"></div>
+
+<div class="mouse-glow"></div>
+
+<nav>
+
+    <div class="logo">
+        CAROLINA<br>GRIZOTTI
+    </div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projetos</a></li>
+        <li><a href="#contact">Contato</a></li>
+        <li><a href="#social">Social</a></li>
+    </ul>
+
+</nav>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1>
+                CAROLINA<br>
+                GRIZOTTI
+            </h1>
+            <p>
+                FULL-STACK WEB DEVELOPER &
+                CREATIVE PROBLEM SOLVER
+            </p>
+        </div>
+        <div class="hero-photo">
+            <img src="imagens/carolina_grizotti.png" alt="Carolina Grizotti">
+        </div>
+    </div>
+</section>
+
+<section class="section" id="about">
+    <h2 class="section-title">Sobre Mim</h2>
+    <div class="glass">
+        <p>
+            Desenvolvedora Full Stack com experiência na construção de sistemas corporativos, plataformas de gestão, automações financeiras e soluções digitais voltadas para otimização de processos e crescimento de negócios.
+        </p>
+    </div>
+
+</section>
+
+<section class="section" id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills">
+        <div class="skill">
+            <i class="fa-brands fa-js"></i>
+            JavaScript
+        </div>
+
+        <div class="skill">
+            <i class="fa-brands fa-php"></i>
+            PHP
+        </div>
+
+        <div class="skill">
+            <i class="fa-brands fa-laravel"></i>
+            Laravel
+        </div>
+
+        <div class="skill">
+            <i class="fa-brands fa-vuejs"></i>
+            Vue.js
+        </div>
+
+        <div class="skill">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 640 640">
+                <path fill="rgb(255, 255, 255)" d="M320 128C234.7 128 181.3 170.7 160 256C192 213.3 229.3 197.3 272 208C296.3 214.1 313.7 231.8 333 251.3C364.4 283.1 400.7 320 480 320C565.3 320 618.7 277.3 640 192C608 234.7 570.7 250.7 528 240C503.7 233.9 486.3 216.2 467 196.7C435.6 164.9 399.3 128 320 128zM160 320C74.7 320 21.3 362.7 0 448C32 405.3 69.3 389.3 112 400C136.3 406.1 153.7 423.8 173 443.3C204.4 475.1 240.7 512 320 512C405.3 512 458.7 469.3 480 384C448 426.7 410.7 442.7 368 432C343.7 425.9 326.3 408.2 307 388.7C275.6 356.9 239.3 320 160 320z"/>
+            </svg>
+            Tailwind
+        </div>
+
+        <div class="skill">
+        <i class="fa-brands fa-wordpress"></i>
+        Wordpress
+        </div>
+    </div>
+</section>
+
+<section class="section" id="projects">
+    <h2 class="section-title">Projetos</h2>
+    <div class="projects">
+        <div class="project" type="button" data-bs-toggle="modal" data-bs-target="#agendamento">
+            <img src="https://picsum.photos/600/350?1">
+            <div class="project-content">
+                <h5>Sistema de Habilitação de Casamento Digital</h3>
+                <p>Plataforma web para gestão completa do processo de habilitação matrimonial.</p>
+                <p>• PHP • JavaScript • Bootstrap • Tailwind CSS • MySQL</p>
+            </div>
+        </div>
+
+        <div class="project" type="button" data-bs-toggle="modal" data-bs-target="#documentos">
+            <img src="https://picsum.photos/600/350?2">
+            <div class="project-content">
+                <h5>Portal de Documentação e Comunicação Corporativa</h5>
+                <p>Plataforma desenvolvida para centralizar documentações, manuais, tutoriais e comunicados, permitindo a distribuição organizada de informações e atualizações para clientes e usuários dos sistemas.</p>
+                <p>• PHP • JavaScript • Bootstrap • MySQL</p>
+            </div>
+        </div>
+
+        <div class="project" data-bs-toggle="modal" data-bs-target="#documentoaqui">
+            <img src="https://picsum.photos/600/350?3">
+            <div class="project-content">
+                <h3>Documento Aqui</h3>
+                <p>Plataforma digital para solicitação, acompanhamento e entrega de certidões e documentos oficiais, com área exclusiva para clientes e gestão completa dos processos documentais.</p>
+                <p>• Next.js • JavaScript • Docker</p>
+            </div>
+        </div>
+
+        <div class="project" data-bs-toggle="modal" data-bs-target="#pratas">
+            <img src="https://picsum.photos/600/350?3">
+            <div class="project-content">
+                <h5>Nathalia Pratas</h5>
+                <p>Website institucional desenvolvido para uma marca de joias em prata, com foco em apresentação de produtos, identidade visual e experiência responsiva para diferentes dispositivos.</p>
+                <p>• WordPress • PHP • JavaScript • CSS</p>
+            </div>
+        </div>
+
+        <div class="project" data-bs-toggle="modal" data-bs-target="#erp">
+            <img src="https://picsum.photos/600/350?3">
+            <div class="project-content">
+                <h5>Plataforma Integrada de Gestão Empresarial</h5>
+                <p>Sistema corporativo em desenvolvimento para integração dos setores da empresa. Atuação no módulo financeiro, com gestão de cobranças, geração de boletos, remessas bancárias, envio automatizado de cobranças e conciliação financeira por arquivos de retorno.</p>
+                <p>• Laravel • Vue.js • PHP • JavaScript • Tailwind CSS</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="contact">
+    <h2 class="section-title">Contato</h2>
+    <div class="glass">
+        <form id="contact-form">
+            <input type="text" id="nome" name="nome" placeholder="Nome" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <textarea rows="5" id="message" name="mensagem" placeholder="Mensagem" required></textarea>
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+    </div>
+</section>
+
+<div class="modal fade" id="agendamento" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Sistema de Habilitação de Casamento</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="project-details">
+
+            <p class="project-description">
+                Plataforma web desenvolvida para digitalizar e otimizar todo o processo
+                de habilitação para casamento civil, conectando cidadãos, cartórios e
+                administração da plataforma em um único ambiente integrado.
+            </p>
+
+            <div class="feature-box">
+                <h5>Portal dos Pretendentes</h5>
+                <p>
+                    Cadastro dos noivos, testemunhas e padrinhos, envio de documentos
+                    digitais e acompanhamento do andamento do processo.
+                </p>
+            </div>
+
+            <div class="feature-box">
+                <h5>Painel da Serventia</h5>
+                <p>
+                    Ambiente administrativo utilizado pelos cartórios para análise
+                    documental, validação de informações, gerenciamento de agendas e
+                    controle das habilitações.
+                </p>
+            </div>
+
+            <div class="feature-box">
+                <h5>Painel Administrativo</h5>
+                <p>
+                    Gestão de múltiplos cartórios, configurações da plataforma,
+                    monitoramento operacional e administração dos clientes.
+                </p>
+            </div>
+
+            <p class="project-description">
+                O sistema automatiza etapas tradicionalmente realizadas de forma manual,
+                reduzindo erros de cadastro, agilizando a conferência documental e
+                proporcionando uma experiência digital moderna para usuários e equipes
+                cartorárias.
+            </p>
+
+            <h5>Tecnologias Utilizadas</h5>
+
+            <div class="tech-stack">
+                <span>• PHP</span>
+                <span>• JavaScript</span>
+                <span>• HTML5</span>
+                <span>• CSS3</span>
+                <span>• Bootstrap</span>
+                <span>• Tailwind CSS</span>
+                <span>• MySQL</span>
+            </div>
+
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="documentos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Portal de Documentação e Comunicação Corporativa</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="project-details">
+
+            <p class="project-description"> 
+                Desenvolvimento de uma plataforma web para centralização e distribuição de conteúdos institucionais, documentações técnicas e comunicados operacionais, proporcionando acesso rápido e organizado às informações necessárias para clientes e usuários dos sistemas. </p> 
+                <div class="feature-box"> 
+                    <h5>Biblioteca de Documentos</h5> 
+                    <p> Ambiente para disponibilização de manuais, guias de utilização, tutoriais e materiais de apoio, organizados por categorias para facilitar a consulta e localização de informações. </p> 
+                </div> 
+                <div class="feature-box"> 
+                    <h5>Central de Comunicados</h5> 
+                    <p> Sistema para publicação de avisos, atualizações de funcionalidades, novidades e comunicados importantes, mantendo os clientes sempre informados sobre alterações e melhorias nos sistemas. </p> 
+                </div> 
+                <div class="feature-box"> 
+                    <h5>Gestão de Conteúdo</h5> 
+                    <p> Painel administrativo para gerenciamento de documentos, atualizações e comunicados, permitindo controle centralizado das informações disponibilizadas aos usuários. </p>
+                </div> 
+                <p class="project-description"> 
+                    A plataforma foi projetada para melhorar a comunicação com clientes, reduzir solicitações de suporte relacionadas a dúvidas operacionais e garantir acesso rápido às informações mais relevantes sobre os produtos e serviços disponibilizados. </p> 
+                <h5>Tecnologias Utilizadas</h5>
+
+            <div class="tech-stack">
+                <span>• PHP</span>
+                <span>• JavaScript</span>
+                <span>• HTML5</span>
+                <span>• CSS3</span>
+                <span>• Bootstrap</span>
+                <span>• Tailwind CSS</span>
+                <span>• MySQL</span>
+            </div>
+
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="documentoaqui" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Documento Aqui</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="project-details">
+
+            <p class="project-description"> 
+                Participação na manutenção evolutiva e implementação de melhorias em uma plataforma digital para solicitação, acompanhamento e entrega de certidões e documentos oficiais. </p> 
+                <div class="feature-box"> 
+                    <h5>Solicitação Online de Certidões</h5> 
+                    <p> Ambiente desenvolvido para permitir que clientes realizem pedidos de diversos tipos de certidões e documentos de forma totalmente digital, simplificando processos tradicionalmente burocráticos. </p> </div> 
+                    <div class="feature-box"> 
+                        <h5>Gestão de Processos Documentais</h5> 
+                        <p> A plataforma auxilia equipes jurídicas e administrativas no gerenciamento das solicitações, acompanhamento dos trâmites junto a cartórios e órgãos competentes, além do controle das etapas de emissão dos documentos. </p> 
+                    </div> 
+                    <div class="feature-box"> 
+                        <h5>Portal do Cliente</h5> 
+                        <p> Área exclusiva para acompanhamento das solicitações e download dos documentos emitidos, proporcionando transparência e praticidade ao usuário durante todo o processo. </p> 
+                    </div> 
+                    <p class="project-description"> 
+                        Atuei na manutenção e evolução da aplicação, realizando ajustes de funcionalidades, correções de comportamento, melhorias de interface e adequações às regras de negócio, colaborando para a estabilidade e aprimoramento contínuo da plataforma. 
+                    </p> 
+                <h5>Tecnologias Utilizadas</h5>
+                <div class="tech-stack">
+                <span>• Next.js</span>
+                <span>• JavaScript</span>
+                <span>• Docker</span>
+                <span>• HTML5</span>
+                <span>• CSS3</span>
+                <span>• MySQL</span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="modal fade" id="pratas" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Nathalia Pratas</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="project-details">
+
+            <p class="project-description">
+                Desenvolvimento de website institucional e catálogo digital para uma
+                marca especializada em joias e acessórios em prata, com foco em
+                apresentação de produtos, fortalecimento da identidade visual e
+                experiência de navegação.
+            </p>
+
+            <div class="feature-box">
+                <h5>Design Voltado para Conversão</h5>
+                <p>
+                    Estruturação das páginas com foco na apresentação dos produtos,
+                    valorização das peças e construção de credibilidade da marca,
+                    proporcionando uma experiência visual alinhada ao segmento de luxo
+                    e acessórios.
+                </p>
+            </div>
+
+            <div class="feature-box">
+                <h5>Gestão Simplificada de Conteúdo</h5>
+                <p>
+                    Utilização do WordPress para permitir atualização de produtos,
+                    imagens, banners e informações institucionais de forma prática e
+                    independente pelo cliente.
+                </p>
+            </div>
+
+            <div class="feature-box">
+                <h5>Experiência Responsiva</h5>
+                <p>
+                    Desenvolvimento adaptado para dispositivos móveis, tablets e
+                    desktops, garantindo acessibilidade e boa experiência de navegação
+                    em diferentes tamanhos de tela.
+                </p>
+            </div>
+
+            <p class="project-description">
+                O projeto foi desenvolvido com foco em presença digital, fortalecimento
+                da marca e preparação da estrutura para futuras estratégias de vendas
+                online e divulgação dos produtos.
+            </p>
+
+            <h5>Tecnologias Utilizadas</h5>
+
+            <div class="tech-stack">
+                <span>WordPress</span>
+                <span>PHP</span>
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+            </div>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="modal fade" id="erp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Plataforma Integrada de Gestão Empresarial</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="project-details">
+
+            <p class="project-description">
+                Desenvolvimento de uma plataforma corporativa para centralização e
+                integração dos processos internos da empresa, reunindo diferentes áreas
+                operacionais em um único ambiente de gestão.
+            </p>
+
+            <div class="feature-box">
+                <h5>Módulo Financeiro</h5>
+                <p>
+                    Desenvolvimento do módulo responsável pelo controle financeiro dos
+                    clientes, permitindo o gerenciamento de mensalidades, custos de
+                    chamados técnicos, ordens de serviço e demais cobranças geradas pela
+                    operação da empresa.
+                </p>
+            </div>
+
+            <div class="feature-box">
+                <h5>Automação Bancária</h5>
+                <p>
+                    Implementação de rotinas para geração de boletos, criação de
+                    arquivos de remessa bancária e envio automático das cobranças para o
+                    e-mail dos clientes, reduzindo atividades manuais e aumentando a
+                    eficiência operacional.
+                </p>
+            </div>
+
+            <div class="feature-box">
+                <h5>Conciliação Financeira</h5>
+                <p>
+                    Desenvolvimento de mecanismos para processamento de arquivos de
+                    retorno bancário, identificação automática de pagamentos e baixa das
+                    cobranças, além de permitir baixa manual e reenvio de boletos quando
+                    necessário.
+                </p>
+            </div>
+
+            <div class="feature-box">
+                <h5>Arquitetura Escalável</h5>
+                <p>
+                    Projeto desenvolvido utilizando arquitetura moderna baseada em
+                    Laravel e Vue.js, possibilitando expansão futura para integração de
+                    novos setores e módulos corporativos dentro da mesma plataforma.
+                </p>
+            </div>
+
+            <p class="project-description">
+                Atuação no desenvolvimento full stack do módulo financeiro, incluindo
+                modelagem de regras de negócio, automações, integrações bancárias,
+                construção de interfaces administrativas e implementação de processos
+                críticos para a operação financeira da empresa.
+            </p>
+
+            <h5>Tecnologias Utilizadas</h5>
+
+            <div class="tech-stack">
+                <span>• Laravel</span>
+                <span>• Vue.js</span>
+                <span>• JavaScript</span>
+                <span>• PHP</span>
+                <span>• HTML5</span>
+                <span>• CSS3</span>
+                <span>• Tailwind CSS</span>
+                <span>• Bootstrap</span>
+                <span>• MySQL</span>
+            </div>
+        </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<footer id="social">
+    <div class="container my-5">
+        <div class="footer-content">
+            <!-- <div class="logo">GRIZOTTI</div> -->
+            <div class="row justify-content-end gap-2">
+                <a href="https://github.com/Grizotti5" class="social"><i class="fab fa-github"></i></a>
+                <a href="#https://linkedin.com/in/carolina-grizotti" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        
+        <div class="copyright text-center">
+            <p>&copy; <span id="ano-atual"></span> Carolina Grizotti. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.getElementById("contact-form").addEventListener("submit", async function(e) {
+        e.preventDefault();
+        Swal.fire({
+            title: 'Enviando formulário...',
+            text: 'Por favor, aguarde.',
+            allowOutsideClick: false,
+            didOpen: () => {
+                Swal.showLoading();
+            }
+        });
+        const form = e.target;
+        const formData = new FormData(form);
+
+        const response = await fetch("https://formspree.io/f/mzzkeqzg", {
+            method: "POST",
+            body: formData,
+            headers: {
+                "Accept": "application/json"
+            }
+        });
+
+        if (response.ok) {
+            Swal.close();
+
+            Swal.fire({
+                title: 'Enviado!',
+                text: 'E-mail enviado com sucesso.',
+                icon: 'success',
+                confirmButtonText: 'Ok'
+            }).then(() =>{
+                form.reset();
+            });
+        } else {
+            Swal.fire({
+                title: 'Erro!',
+                text: 'E-mail não enviado.',
+                icon: 'error',
+                confirmButtonText: 'Ok'
+            })
+        }
+    });
+    document.addEventListener('mousemove', e => {
+        const x =
+        (e.clientX / window.innerWidth) * 100;
+        const y =
+        (e.clientY / window.innerHeight) * 100;
+        document.documentElement
+            .style
+            .setProperty('--mouse-x', `${x}%`);
+        document.documentElement
+            .style
+            .setProperty('--mouse-y', `${y}%`);
+    });
+
+    /* Glow */
+
+    const glow =
+    document.querySelector('.mouse-glow');
+
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+
+    let currentX = mouseX;
+    let currentY = mouseY;
+
+    document.addEventListener('mousemove', e => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    function animateGlow(){
+
+        currentX += (mouseX - currentX) * 0.08;
+        currentY += (mouseY - currentY) * 0.08;
+
+        glow.style.left = currentX + 'px';
+        glow.style.top = currentY + 'px';
+
+        requestAnimationFrame(animateGlow);
+    }
+
+    animateGlow();
+
+    /* Parallax blobs */
+
+    const blobs =
+    document.querySelectorAll('.blob');
+
+    document.addEventListener('mousemove', e => {
+
+        blobs.forEach((blob,index)=>{
+
+            const speed = (index + 1) * 0.015;
+
+            const x =
+            (e.clientX - window.innerWidth/2)
+            * speed;
+
+            const y =
+            (e.clientY - window.innerHeight/2)
+            * speed;
+
+            blob.style.transform =
+            `translate(${x}px,${y}px)`;
+
+        });
+
+    });
+    document.getElementById("ano-atual").textContent = new Date().getFullYear();
+</script>
+</html>
